@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .badge{
+            border-radius: 20px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            display:grid;
+            width: fit-content;
+            grid-template: auto auto;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function gerarBadge(email,nome,numero){
+            let badge = `
+            <div class="badge">
+            <h1 class="icon">${email}</h1>
+            <h2 class="name">${nome}</h2>
+            <div class="description">
+                <p> ${numero}</p>
+            </div>
+        </div>`
+        return badge
+        }
+
+        fetch("http://localhost:8080/clientes/" ,{method: "get"})
+        .then( response=>{
+            response.json()
+            .then(dados=>{
+                    let dadosStr ="";
+                    dados.forEach(dado=> {
+                        dadosStr +=gerarBadge(dado.email,dado.nome,dado.numero);
+                        
+                    })
+                    console.log(dadosStr);
+                    document.getElementById("badge-contrainer").innerHTML = dadosStr;
+                }
+            )
+        }
+
+        )
+    </script>
+    <h1>Badges</h1>
+    <div class="badges-contrainer" id="badge-contrainer">
+        <div class="badge">
+            <h1 class="icon">Faifemarcelo@gmail.com</h1>
+            <h2 class="name">Tesai</h2>
+            <div class="description">
+                <p>849503457</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

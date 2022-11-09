@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSoft/login</title>
+    <link rel="stylesheet" href="/estilo/entrar.css">
+    <link rel="shortcut icon" href="/imagem/ws.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a id="edicao" href="">WebSoft</a>
+    </header>
+
+    <main>
+        <div class="Fundo">
+            <div class="Black_Fundo">
+                <div class="Perfil_Imagem">
+                    <img src="/imagem/perfilinicial1.png" alt="">
+                </div>
+                <h1>Entrar</h1>
+                <div class="Formularios">
+                        <form action="/login/" method="post">
+                        <div class="Formulario">
+                            <div class="Labels">
+                                <label for="">Email:</label>
+                            </div>
+                            <input type="email" name="email" class="Input" required >
+                        </div>
+                        <div class="Formulario">
+                            <div class="Labels">
+                                <label for="">Palavra-passe:</label>
+                            </div>
+                            <input type="password" name="palavra_passe" class="Input"  required  >
+                        </div>
+                        <div class="Criar_conta">
+                            <a href="/pages/pagina-de-recuperar.html">
+                                <div>
+                                    Esqueceu <span class="corVerde">
+                                        email/palavra-passe?</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="Butao_principal">
+                            <input type="submit" class="butao" value="Continuar"></input>
+                        </div>
+                        <div class="centro">
+                            <div id="estiloP">Nao tem uma conta? </div>
+                            <div class="centralizar">
+                                <a href="/pages/pagina-de-criarConta.html"><span class="corVerde"> Inscreva-se agora</span></a>
+                            </div>
+    
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

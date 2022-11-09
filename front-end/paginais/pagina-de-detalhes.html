@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/estilo/Detalhes.css">
+</head>
+<body>
+    <header>
+        <a id="logo_text" class="elemento_menu" href="">WebSoft</a>
+        <span class="element_set">
+            <a class="elemento_menu" href="/pages/pagina-de-dashborder.html">Inicio</a>
+            <a class="elemento_menu" href="/pages/pagina-de-servicos.html">Servico</a>
+            <a class="elemento_menu" href="/pages/pagina-de-contacto.html">Contacto</a>
+            <a class="elemento_menu" href="/pages/pagina-de-sobre.html">Sobre</a>
+           
+        </span>
+    </header>
+  <main>
+    <div class="topo">
+      <h2 class="main-text-nbr">
+          Minha conta
+      </h2><br>
+      <div  class="section">
+        <p class="label"><strong>Dados pessoais</strong></p>
+        <hr>
+        <form action="/siginuser/" method="post">
+          <div class="container-block">
+            <div class="input-area">
+              <div class="label">Nome</div>
+              <input type="text" id="nome" name="nome" placeholder="Antonio" class="field">
+            </div>
+          
+          <div class="input-area">
+              <div class="label">Contacto</div>
+              <input type="tel" id="contacto" name="contacto" placeholder="+258841969548" class="field">
+          </div>
+          <div class="input-area">
+              <div class="label">Email</div>
+              <input type="email" id="Email" name="Email" placeholder="antonio@gmail.com" class="field">
+          </div>
+          
+          <div class="input-area" >
+              <div class="label">Palavra-Passe</div>
+              <input type="password" id="palavra-passe" name="palavra-passe" placeholder="123ABC" class="field">
+          </div>
+        
+          <button type="submit" onclick="checkpassword()" class="button button-regular field-colored">Alterar</button>
+          </div>
+          <script>
+              function checkpassword() {
+                  let palavra_passe=document.getElementById("palavra-passe");   
+                  let palavra_passe_repetida=document.getElementById("palavra-passe-repetida"); 
+                  
+                  if(palavra_passe.value!=palavra_passe_repetida.value){
+                      alert("A palavra-passe não é a mesma.");
+                  }
+              }
+          </script>
+      </form>
+      </div>
+   </div>
+  
+  </main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    --primary-color: #65c6db;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.element_set {
+    display: inline-block;
+    padding: 10px;
+}
+
+#logo_text {
+    padding: 15px;
+    font-weight: bold;
+    font-size:30px;
+}
+
+.button_sigin {
+    display: inline-block;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #000f;
+    color: white;
+}
+
+.elemento_menu {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size:20px;
+}
+
+.image_container {
+    color: white;
+    background-image: url('/imagem/FundoPrincipal.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    background-size: 100% 100%;
+}
+
+.black_background {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    background-color: #0005;
+}
+
+.description {
+    margin: auto;
+    text-align: center;
+}
+
+.inline_text {
+    display: inline;
+}
+
+.service {
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    width: 300px;
+    height: fit-content;
+    grid-template: "auto auto";
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #ccc;
+}
+
+.service tr td {
+    padding: 3px;
+    text-align: start;
+    vertical-align: top;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.services {
+    padding: 20px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.services_grid {
+    padding-top: 20px;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: auto;
+    margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+    .services_grid { 
+        grid-template-columns: auto auto;
+    }
+}
+
+/* no minimo 1000px 3 colunas na grelha */
+@media screen and (min-width: 1000px) {
+    .services_grid { 
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.about_area {
+    padding: 20px;
+    text-align: center;
+}
+
+.about_area_description {
+    width: 80%;
+    margin: auto;
+}
+
+footer {
+    background-color:#0005;
+    color: #eee;
+}
